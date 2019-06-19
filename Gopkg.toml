@@ -1,0 +1,25 @@
+[[constraint]]
+  name = "github.com/docker/cli"
+  branch = "19.03"
+
+[[override]]
+  name = "github.com/docker/docker"
+  source = "https://github.com/docker/engine"
+  branch = "19.03"
+
+[[override]]
+  name = "github.com/containerd/containerd"
+  revision = "3a3f0aac8819165839a41fee77a4f4ac8b103097"
+
+[[override]]
+  name = "github.com/docker/distribution"
+  revision = "0d3efadf0154c2b8a4e7b6621fff9809655cc580"
+
+[prune]
+  non-go = true
+  unused-packages = true
+  go-tests = true
+
+  [[prune.project]]
+    name = "github.com/docker/cli"
+    non-go = false
